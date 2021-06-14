@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #234e23;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    height: 800px;
+}
+
+.container > h1{
+    font-family: "Fira Code Retina";
+    text-shadow: 5px 5px #2d2c29;
+    color: #d7b506;
+    font-weight: bold;
+    font-style: ;
+    letter-spacing: 2px;
+}
+.button-container{
+    display: flex;
+    height: 150px;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+
+
+.player-field{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 700px;
+    width: min-content;
+
+
+}
+.player-1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: fantasy;
+
+    font-weight: bold;
+    width: 350px;
+    height: 480px;
+
+    margin-right: 60px;
+    border-radius: 10%;
+    border:8px solid #ffd50a;
+
+
+
+}
+
+.player-2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: fantasy;
+    font-weight: bold;
+    width: 350px;
+    height: 480px;
+    margin-left: 60px;
+    border-radius: 10%;
+    border: 10px solid #ffd50a;
+
+}
+.player-1 > p{
+    position: relative;
+    top: 2%;
+    color: #ffd50a;
+}
+
+.player-2 > p{
+    position: relative;
+    top: 2%;
+    color: #ffd50a;
+}
+
+.player-1 .active{
+    border: #333333;
+
+
+}
+
+.player-2 .active{
+    border: #333333;
+}
+
+
+
+.button{
+    height: 40px;
+    width: 90px;
+    margin: 10px;
+    background-color: black;
+    color: #f52626;
+    font-weight: bold;
+    font-family: "Fira Code Retina";
+    font-size: large;
+    border-radius: 10%;
+
+}
+
