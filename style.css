@@ -18,8 +18,8 @@ body{
     background: url(./cards/filc.jpg);
     width: 90%;
     height: 90%;
-    border-radius: 14%;
-    border: 100px solid black;
+    border: 50px solid black;
+    border-radius: 15%;
 
 }
 
