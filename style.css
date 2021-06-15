@@ -1,16 +1,21 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+
 body{
     background: url(./static/bground.jpg);
     display: flex;
     justify-content: center;
-
-
+    align-items: center;
 
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 1500px;
     height: 1000px;
@@ -38,7 +43,7 @@ body{
 .player-field{
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     height: 700px;
     width: min-content;
@@ -52,12 +57,12 @@ body{
     font-family: fantasy;
 
     font-weight: bold;
-    width: 350px;
-    height: 480px;
+    width: 380px;
+    height: 500px;
 
     margin-right: 60px;
     border-radius: 10%;
-    border:8px solid #ffd50a;
+    border:6px solid #ffd50a;
 
 
 
@@ -69,11 +74,11 @@ body{
     justify-content: center;
     font-family: fantasy;
     font-weight: bold;
-    width: 350px;
-    height: 480px;
+    width: 380px;
+    height: 500px;
     margin-left: 60px;
     border-radius: 10%;
-    border: 10px solid #ffd50a;
+    border: 6px solid #ffd50a;
 
 }
 .player-1 > p{
