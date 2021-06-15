@@ -3,13 +3,11 @@ html, body {
     height: 100%;
 }
 
-
 body{
     background: url(./static/bground.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .container{
@@ -17,9 +15,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1500px;
-    height: 1000px;
     background: url(./cards/filc.jpg);
+    width: 90%;
+    height: 90%;
     border-radius: 14%;
     border: 100px solid black;
 
@@ -30,44 +28,37 @@ body{
     text-shadow: 5px 5px #2d2c29;
     color: #d7b506;
     font-weight: bold;
-    font-style: ;
     letter-spacing: 2px;
 }
+
 .button-container{
     display: flex;
-    height: 150px;
+    height: 20%;
     align-items: flex-start;
     flex-direction: row;
 }
-
-
 
 .player-field{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    height: 700px;
-    width: min-content;
-
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
 
 }
+
 .player-1{
     display: flex;
     align-items: flex-start;
     justify-content: center;
     font-family: fantasy;
-
     font-weight: bold;
-    width: 380px;
-    height: 500px;
+    width: 30%;
+    height: 70%;
 
-    margin-right: 60px;
     border-radius: 10%;
     border:6px solid #ffd50a;
-
-
-
 }
 
 .player-2{
@@ -76,12 +67,19 @@ body{
     justify-content: center;
     font-family: fantasy;
     font-weight: bold;
-    width: 380px;
-    height: 500px;
-    margin-left: 60px;
+    width: 30%;
+    height: 70%;
+
     border-radius: 10%;
     border: 6px solid #ffd50a;
+}
 
+.deck{
+    display: flex;
+    border: 6px solid #ffd50a;
+    height: 40%;
+    width: 15%;
+    border-radius: 10%;
 }
 .player-1 > p{
     position: relative;
@@ -99,15 +97,17 @@ body{
 
 .player-1 .active{
     border: #333333;
-
-
 }
 
 .player-2 .active{
     border: #333333;
 }
 
-
+@keyframes button {
+    0% {background-color: red}
+    50% {color: blue}
+    100% {background-color: black}
+}
 
 .button{
     height: 40px;
@@ -119,6 +119,11 @@ body{
     font-family: "Fira Code Retina";
     font-size: large;
     border-radius: 10%;
-
+    animation-name: button;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
+.button:hover {
+
+}
