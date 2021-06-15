@@ -28,11 +28,12 @@ body{
 .container > h1{
     font-family: "Fira Code Retina";
     font-size: 2vw;
-    text-shadow: 5px 5px #2d2c29;
+    text-shadow: 6px 5px #2d2c29;
     color: #d7b506;
     font-weight: bold;
     letter-spacing: 2px;
-}
+
+    }
 
 .button-container{
     display: flex;
@@ -63,7 +64,7 @@ body{
     height: 70%;
 
     border-radius: 10%;
-    border:6px solid #ffd50a;
+    border:0.2vw solid #ffd50a;
 }
 
 .player-2{
@@ -76,12 +77,13 @@ body{
     height: 70%;
 
     border-radius: 10%;
-    border: 6px solid #ffd50a;
+    border: 0.2vw solid #ffd50a;
+
 }
 
 .deck{
     display: flex;
-    border: 6px solid #ffd50a;
+    border: 0.2vw solid #ffd50a;
     height: 40%;
     width: 15%;
     border-radius: 10%;
@@ -122,8 +124,9 @@ body{
     color: #f52626;
     font-weight: bold;
     font-family: "Fira Code Retina";
-    font-size: large;
+    font-size: 1.6vw;
     border-radius: 10%;
+    border-style: dotted;
     animation-name: button;
     animation-duration: 3s;
     animation-iteration-count: infinite;
