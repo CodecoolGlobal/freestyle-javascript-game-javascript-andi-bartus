@@ -82,11 +82,14 @@ body{
 }
 
 .deck{
+    background: url(./cards/purple_back.png) no-repeat;
+    background-position: center;
+    background-size: 8vw;
     display: flex;
     border: 0.2vw solid #ffd50a;
-    height: 40%;
-    width: 15%;
-    border-radius: 10%;
+    height: 37%;
+    width: 12%;
+    border-radius: 7%;
 }
 .player-1 > p{
     position: relative;
