@@ -1,8 +1,10 @@
 body{
+    background: url(./static/bground.jpg);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    background-color: #234e23;
+
+
+
 }
 
 .container{
@@ -10,8 +12,10 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 1200px;
-    height: 800px;
+    width: 1500px;
+    height: 1000px;
+    background-color: #234e23;
+    border-radius: 15%;
 }
 
 .container > h1{
