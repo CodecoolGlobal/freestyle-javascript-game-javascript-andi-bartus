@@ -43,7 +43,6 @@ function initGame() {
     let hand = '#p1_hand'
 
     function hit_player () {
-        let count = 0
         let hit_button = document.querySelector(".hit");
         hit_button.addEventListener('click', function test() {
             let random_card = deck[Math.floor(Math.random() * (deck.length - 1))]
@@ -51,23 +50,19 @@ function initGame() {
             hand_img.src = `./cards/${random_card.Value}${random_card.Suit}.png`
             hand_img.classList.add("card")
             document.querySelector(hand).appendChild(hand_img)
-            if (++count === 8) {
-                hit_button.removeEventListener('click', test)
-            }
-
         })
     }
-    hit_player()
+
     function stay() {
         let stay = document.querySelector(".stay");
         stay.addEventListener('click', function () {
             document.querySelector(".player-1").classList.remove("active")
             hand = '#p2_hand'
             document.querySelector(".player-2").classList.add("active")
-            hit_player()
         })
     }
     stay()
+    hit_player()
 
 
 
