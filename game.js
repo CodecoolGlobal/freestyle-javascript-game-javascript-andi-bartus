@@ -7,6 +7,8 @@ function initGame() {
     // Your game can start here, but define separate functions, don't write everything in here :)
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
+    console.log(queryString)
+    console.log(urlParams)
     const player1_name = urlParams.get('player1');
     const player2_name = urlParams.get('player2');
 
