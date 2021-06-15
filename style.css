@@ -15,13 +15,25 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background: url(./cards/filc.jpg);
     width: 75%;
     height: 90%;
     border: 50px solid black;
     border-radius: 15%;
+
+}
+.bet-field{
+    display: flex;
+    justify-items: center ;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    border-radius: 100%;
+    margin-bottom: 30%;
+    border:0.3vw solid #ffd50a;
+
 
 }
 
@@ -47,35 +59,37 @@ body{
 .player-field{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-around;
     height: 100%;
     width: 100%;
+    padding-bottom: 1vw;
 
 }
 
-.player-1{
+.player-1-cards{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: fantasy;
     font-weight: bold;
-    width: 30%;
-    height: 80%;
+    width: 90%;
+    height: 70%;
+    margin-top: 20%;
 
     border-radius: 10%;
     border:0.5vw solid #ffd50a;
 }
 
-.player-2{
+.player-2-cards{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: fantasy;
     font-weight: bold;
-    width: 30%;
-    height: 80%;
-
+    width: 90%;
+    height: 70%;
+    margin-top: 20%;
     border-radius: 10%;
     border: 0.5vw solid #ffd50a;
 
@@ -88,7 +102,7 @@ body{
     display: flex;
     border: 0.2vw solid #ffd50a;
     height: 37%;
-    width: 12%;
+    width: 60%;
     border-radius: 7%;
 }
 .player-1 > p{
@@ -143,4 +157,51 @@ body{
 .card{
     max-width: 25%;
   height: auto;
+}
+
+
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+
+}
+.player-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+.chip{
+    display: flex;
+
+}
+
+.player-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+.chips{
+    display: flex;
+    flex-direction: row;
+}
+.chip >img {
+    max-width: 60%;
+    height: auto;
+    background-color: transparent;
+
+}
+
+.counter{
+    color: #ffd50a;
 }

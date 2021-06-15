@@ -72,4 +72,13 @@ function initGame() {
 
 
 
-}
+    }
+
+
+function initChips(){
+    const bet_field = document.querySelector('.bet-field')
+    const players_chips = document.querySelectorAll('.chips')
+    for (let chip of chips){
+
+    }
+    }
