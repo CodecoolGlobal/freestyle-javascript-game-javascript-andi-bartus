@@ -1,3 +1,5 @@
+
+
 html, body {
     margin: 0;
     height: 100%;
@@ -16,7 +18,7 @@ body{
     justify-content: center;
     align-items: center;
     background: url(./cards/filc.jpg);
-    width: 90%;
+    width: 75%;
     height: 90%;
     border-radius: 14%;
     border: 100px solid black;
@@ -25,6 +27,7 @@ body{
 
 .container > h1{
     font-family: "Fira Code Retina";
+    font-size: 2vw;
     text-shadow: 5px 5px #2d2c29;
     color: #d7b506;
     font-weight: bold;
@@ -34,8 +37,10 @@ body{
 .button-container{
     display: flex;
     height: 20%;
-    align-items: flex-start;
+    width: 60%;
+    align-items: center;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .player-field{
@@ -85,14 +90,14 @@ body{
     position: relative;
     top: 2%;
     color: #ffd50a;
-    font-size: 40px;
+    font-size: 1.7vw;
 }
 
 .player-2 > p{
     position: relative;
     top: 2%;
     color: #ffd50a;
-    font-size: 40px;
+    font-size: 1.7vw;
 }
 
 .player-1 .active{
@@ -104,15 +109,15 @@ body{
 }
 
 @keyframes button {
-    0% {background-color: red}
+    0% {background-color: green}
     50% {color: blue}
     100% {background-color: black}
 }
 
 .button{
-    height: 40px;
-    width: 90px;
-    margin: 10px;
+    height: 50%;
+    width: 20%;
+
     background-color: black;
     color: #f52626;
     font-weight: bold;
@@ -120,7 +125,7 @@ body{
     font-size: large;
     border-radius: 10%;
     animation-name: button;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
