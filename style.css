@@ -3,13 +3,11 @@ html, body {
     height: 100%;
 }
 
-
 body{
     background: url(./static/bground.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .container{
@@ -17,8 +15,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1500px;
-    height: 1000px;
+    width: 90%;
+    height: 90%;
     background-color: #234e23;
     border-radius: 14%;
 }
@@ -28,44 +26,36 @@ body{
     text-shadow: 5px 5px #2d2c29;
     color: #d7b506;
     font-weight: bold;
-    font-style: ;
     letter-spacing: 2px;
 }
+
 .button-container{
     display: flex;
-    height: 150px;
+    height: 20%;
     align-items: flex-start;
     flex-direction: row;
 }
-
-
 
 .player-field{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    height: 700px;
-    width: min-content;
-
-
+    justify-content: center;
+    height: 100%;
+    width: 80%;
 }
+
 .player-1{
     display: flex;
     align-items: flex-start;
     justify-content: center;
     font-family: fantasy;
-
     font-weight: bold;
-    width: 380px;
-    height: 500px;
-
+    width: 40%;
+    height: 70%;
     margin-right: 60px;
     border-radius: 10%;
     border:6px solid #ffd50a;
-
-
-
 }
 
 .player-2{
@@ -74,13 +64,13 @@ body{
     justify-content: center;
     font-family: fantasy;
     font-weight: bold;
-    width: 380px;
-    height: 500px;
+    width: 40%;
+    height: 70%;
     margin-left: 60px;
     border-radius: 10%;
     border: 6px solid #ffd50a;
-
 }
+
 .player-1 > p{
     position: relative;
     top: 2%;
@@ -95,15 +85,17 @@ body{
 
 .player-1 .active{
     border: #333333;
-
-
 }
 
 .player-2 .active{
     border: #333333;
 }
 
-
+@keyframes button {
+    0% {background-color: red}
+    50% {color: blue}
+    100% {background-color: black}
+}
 
 .button{
     height: 40px;
@@ -115,6 +107,11 @@ body{
     font-family: "Fira Code Retina";
     font-size: large;
     border-radius: 10%;
-
+    animation-name: button;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
+.button:hover {
+    transform: ;
+}
