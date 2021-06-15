@@ -12,10 +12,10 @@ function initGame() {
     const player1_name = urlParams.get('player1');
     const player2_name = urlParams.get('player2');
 
-    let player_1 = document.querySelector(".player-1 > p");
+    let player_1 = document.querySelector(".player-1-cards > p");
     player_1.innerHTML = player1_name
 
-    let player_2 = document.querySelector(".player-2 > p");
+    let player_2 = document.querySelector(".player-2-cards > p");
     player_2.innerHTML = player2_name
 
     let suits = ["S", "H", "D", "C"];
@@ -41,8 +41,12 @@ function initGame() {
     }
     createDeck()
     let hand = '#p1_hand'
+    let player_score = '#p1_score > p'
+    let count = 0
+
 
     function hit_player () {
+
         let hit_button = document.querySelector(".hit");
         hit_button.addEventListener('click', function test() {
             let random_card = deck[Math.floor(Math.random() * (deck.length - 1))]
@@ -50,15 +54,19 @@ function initGame() {
             hand_img.src = `./cards/${random_card.Value}${random_card.Suit}.png`
             hand_img.classList.add("card")
             document.querySelector(hand).appendChild(hand_img)
+            let score = document.querySelector(player_score)
+            count += random_card.Weight
+            score.innerHTML = "Score: " + count
         })
     }
-
     function stay() {
         let stay = document.querySelector(".stay");
         stay.addEventListener('click', function () {
-            document.querySelector(".player-1").classList.remove("active")
+            document.querySelector(".player-1-cards").classList.remove("active")
             hand = '#p2_hand'
-            document.querySelector(".player-2").classList.add("active")
+            player_score = '#p2_score > p'
+            count = 0
+            document.querySelector(".player-2-cards").classList.add("active")
         })
     }
     stay()
@@ -67,4 +75,13 @@ function initGame() {
 
 
 
-}
+    }
+
+
+function initChips(){
+    const bet_field = document.querySelector('.bet-field')
+    const players_chips = document.querySelectorAll('.chips')
+    for (let chip of chips){
+
+    }
+    }

@@ -14,21 +14,55 @@
     <h1>BLACKjACK</h1>
     <div class="button-container">
         <button class="button restart">Start</button>
-        <button class="button hit">Hit me</button>
-        <button class="button stay">Stay</button>
     </div>
     <div class="player-field">
-        <div class="player-1 active">
-            <p>Player I.</p><br>
-            <div class="hand_image" id="p1_hand">
 
+
+
+        <div class="player-1">
+        <div class="chips" id="player-1">
+
+               <div class="chip 5"><img src="chips/blue.png"  draggable="true" /></div>
+                <div class="chip-5 counter">2</div>
+                <div class="chip 10"><img src="chips/red.png"  draggable="true"/></div>
+                <div class="chip-10 counter">2</div>
+                <div class="chip 20"><img src="chips/black.png" a draggable="true"/></div>
+                <div class="chip-20 counter">1</div>
+
+
+        </div>
+        <div class="player-1-cards active">
+            <p>Player I.</p>
+          <div class="hand_image" id="p1_hand"></div>
+        </div>
+            <div id="p1_score">
+                <p class="score">Score:</p>
             </div>
         </div>
-        <div class="deck"></div>
-        <div class="player-2">
-            <p>Player II.</p><br>
-            <div class="hand_image" id="p2_hand">
 
+         <div class="table">
+            <div class="bet-field"></div>
+            <div class="deck hit"></div>
+             <p></p>
+            <button class="button stay asd">Stay</button>
+        </div>
+
+        <div class="player-2">
+            <div class="chips" id="player-2">
+
+                    <div class="chip 5"><img src="chips/blue.png"  draggable="true" /></div>
+                    <div class="chip-5 counter">2</div>
+                    <div class="chip 10"><img src="chips/red.png"  draggable="true"/></div>
+                    <div class="chip-10 counter">2</div>
+                    <div class="chip 20"><img src="chips/black.png"  draggable="true"/></div>
+                    <div class="chip-20 counter">1</div>
+            </div>
+            <div class="player-2-cards">
+                <p>Player II.</p>
+            <div class="hand_image" id="p2_hand"></div>
+            </div>
+            <div id="p2_score">
+                <p class="score">Score:</p>
             </div>
         </div>
     </div>
