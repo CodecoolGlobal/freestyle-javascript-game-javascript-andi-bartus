@@ -75,6 +75,7 @@ body{
     font-weight: bold;
     width: 90%;
     height: 70%;
+    margin-top: 20%;
 
     border-radius: 10%;
     border:0.2vw solid #ffd50a;
@@ -88,7 +89,7 @@ body{
     font-weight: bold;
     width: 90%;
     height: 70%;
-
+    margin-top: 20%;
     border-radius: 10%;
     border: 0.2vw solid #ffd50a;
 
@@ -171,7 +172,7 @@ body{
     height: 100%;
 }
 
-.chip-player-1{
+.chip{
     display: flex;
 
 }
@@ -184,7 +185,13 @@ body{
     width: 40%;
     height: 100%;
 }
-
-.chip-player-2{
+.chips{
     display: flex;
+    flex-direction: row;
+}
+.chip >img {
+    max-width: 60%;
+    height: auto;
+    background-color: transparent;
+
 }
