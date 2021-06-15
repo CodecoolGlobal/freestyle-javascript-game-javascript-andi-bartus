@@ -105,14 +105,14 @@ body{
     width: 60%;
     border-radius: 7%;
 }
-.player-1 > p{
+.player-1-cards > p{
     position: relative;
     top: 2%;
     color: #ffd50a;
     font-size: 1.7vw;
 }
 
-.player-2 > p{
+.player-2-cards > p{
     position: relative;
     top: 2%;
     color: #ffd50a;

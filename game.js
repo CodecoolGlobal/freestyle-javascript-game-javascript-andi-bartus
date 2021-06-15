@@ -12,10 +12,10 @@ function initGame() {
     const player1_name = urlParams.get('player1');
     const player2_name = urlParams.get('player2');
 
-    let player_1 = document.querySelector(".player-1 > p");
+    let player_1 = document.querySelector(".player-1-cards > p");
     player_1.innerHTML = player1_name
 
-    let player_2 = document.querySelector(".player-2 > p");
+    let player_2 = document.querySelector(".player-2-cards > p");
     player_2.innerHTML = player2_name
 
     let suits = ["S", "H", "D", "C"];
@@ -61,9 +61,9 @@ function initGame() {
     function stay() {
         let stay = document.querySelector(".stay");
         stay.addEventListener('click', function () {
-            document.querySelector(".player-1").classList.remove("active")
+            document.querySelector(".player-1-cards").classList.remove("active")
             hand = '#p2_hand'
-            document.querySelector(".player-2").classList.add("active")
+            document.querySelector(".player-2-cards").classList.add("active")
             hit_player()
         })
     }
