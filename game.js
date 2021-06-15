@@ -1,6 +1,7 @@
 initGame();
 
 
+
 function initGame() {
 
     // Your game can start here, but define separate functions, don't write everything in here :)
@@ -37,14 +38,29 @@ function initGame() {
         }
     }
     createDeck()
+    let hand = '#p1_hand'
+    function hit_player () {
+        let hit_button = document.querySelector(".hit");
+        hit_button.addEventListener('click', function () {
+            let random_card = deck[Math.floor(Math.random() * (deck.length - 1))]
+            let hand_img = document.createElement('img')
+            hand_img.src = `./cards/${random_card.Value}${random_card.Suit}.png`
+            hand_img.classList.add("card")
+            document.querySelector(hand).appendChild(hand_img)
 
-    let hit_button = document.querySelector(".hit");
-    hit_button.addEventListener('click', function (){
-        let random_card = deck[Math.floor(Math.random() * (deck.length - 1))]
-        let hand_img = document.createElement('img')
-        hand_img.src = `./cards/${random_card.Value}${random_card.Suit}.png`
-        document.querySelector('#p1_hand').appendChild(hand_img)
-    })
+        })
+    }
+    hit_player()
+    function stay() {
+        let stay = document.querySelector(".stay");
+        stay.addEventListener('click', function () {
+            document.querySelector(".player-1").classList.remove("active")
+            hand = '#p2_hand'
+            document.querySelector(".player-2").classList.add("active")
+        })
+    }
+    stay()
+
 
 
 

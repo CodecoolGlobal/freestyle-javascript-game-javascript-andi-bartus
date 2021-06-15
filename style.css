@@ -56,28 +56,28 @@ body{
 
 .player-1{
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-family: fantasy;
     font-weight: bold;
     width: 30%;
-    height: 70%;
+    height: 80%;
 
     border-radius: 10%;
-    border:0.2vw solid #ffd50a;
+    border:0.5vw solid #ffd50a;
 }
 
 .player-2{
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-family: fantasy;
     font-weight: bold;
     width: 30%;
-    height: 70%;
+    height: 80%;
 
     border-radius: 10%;
-    border: 0.2vw solid #ffd50a;
+    border: 0.5vw solid #ffd50a;
 
 }
 
@@ -101,19 +101,18 @@ body{
     color: #ffd50a;
     font-size: 1.7vw;
 }
-
-.player-1 .active{
-    border: #333333;
+@keyframes active {
+    0% {border-color: red}
+    100% {border-color: yellow}
 }
-
-.player-2 .active{
-    border: #333333;
+.active{
+    animation-name: active;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
-
 @keyframes button {
-    0% {background-color: green}
-    50% {color: blue}
-    100% {background-color: black}
+    0% {background-color: white}
+    100% {color: aliceblue}
 }
 
 .button{
@@ -134,4 +133,9 @@ body{
 
 .button:hover {
 
+}
+
+.card{
+    max-width: 25%;
+  height: auto;
 }
