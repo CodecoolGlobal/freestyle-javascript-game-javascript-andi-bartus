@@ -34,6 +34,10 @@ body{
     margin-bottom: 30%;
     border:0.3vw solid #ffd50a;
 
+    }
+.bet-field > img{
+    width: 20%;
+
 
 }
 
@@ -75,7 +79,7 @@ body{
     font-weight: bold;
     width: 90%;
     height: 70%;
-    margin-top: 12%;
+    margin-top: 20%;
 
     border-radius: 10%;
     border:0.5vw solid #ffd50a;
@@ -195,7 +199,7 @@ body{
     display: flex;
     flex-direction: row;
 }
-.chip >img {
+.chip > img {
     max-width: 60%;
     height: auto;
     background-color: transparent;

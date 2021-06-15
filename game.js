@@ -7,8 +7,6 @@ function initGame() {
     // Your game can start here, but define separate functions, don't write everything in here :)
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    console.log(queryString)
-    console.log(urlParams)
     const player1_name = urlParams.get('player1');
     const player2_name = urlParams.get('player2');
 
@@ -17,7 +15,7 @@ function initGame() {
 
     let player_2 = document.querySelector(".player-2-cards > p");
     player_2.innerHTML = player2_name
-
+    initChips()
     let suits = ["S", "H", "D", "C"];
     let values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
     let deck = [];
@@ -75,13 +73,60 @@ function initGame() {
 
 
 
+
+
     }
 
 
 function initChips(){
     const bet_field = document.querySelector('.bet-field')
-    const players_chips = document.querySelectorAll('.chips')
-    for (let chip of chips){
+    const chips = document.querySelectorAll('.chips')
+    console.log('')
+    let dragged_item = null
+
+    for (let item of chips){
+                item.draggable = true
+                item.addEventListener('dragstart', function (e) {
+                dragged_item = e.target
+
+        });
+
+
+        item.addEventListener('dragend', function(){
+            setTimeout(function (){
+                dragged_item.style.display= 'block';
+                dragged_item = null
+            }, 0)
+        });
+
+        bet_field.addEventListener('dragover', function (e){
+            console.log('dragover')
+            e.preventDefault()
+            });
+
+        bet_field.addEventListener('dragenter', function (e){
+            console.log('dragenter')
+                e.preventDefault()
+
+            });
+
+
+        bet_field.addEventListener('drop', function(e){
+            let value = dragged_item.dataset.value
+
+            this.appendChild(dragged_item)
+
+
+
+
+
+
+
+            })
+        }
+
+
+
 
     }
-    }
+
