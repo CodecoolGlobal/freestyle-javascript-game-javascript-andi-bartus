@@ -41,6 +41,13 @@ body{
 
 }
 
+.bet-field > p{
+
+    color: #ffd50a;
+    font-weight: bold;
+
+}
+
 .container > h1{
     font-family: "Fira Code Retina";
     font-size: 2vw;

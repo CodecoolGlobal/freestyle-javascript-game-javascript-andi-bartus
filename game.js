@@ -78,39 +78,40 @@ function initGame() {
 function initChips(){
     const bet_field = document.querySelector('.bet-field')
     const chips = document.querySelectorAll('.chips')
-    console.log('')
     let dragged_item = null
-
-    for (let item of chips){
-                item.draggable = true
-                item.addEventListener('dragstart', function (e) {
-                dragged_item = e.target
+    let bet_counter = 0
+    for (let item of chips) {
+        item.draggable = true
+        item.addEventListener('dragstart', function (e) {
+            dragged_item = e.target
 
         });
 
 
-        item.addEventListener('dragend', function(){
-            setTimeout(function (){
-                dragged_item.style.display= 'block';
+        item.addEventListener('dragend', function () {
+            setTimeout(function () {
+                dragged_item.style.display = 'block';
                 dragged_item = null
             }, 0)
         });
+    }
 
         bet_field.addEventListener('dragover', function (e){
-            console.log('dragover')
             e.preventDefault()
             });
 
         bet_field.addEventListener('dragenter', function (e){
-            console.log('dragenter')
-                e.preventDefault()
+            e.preventDefault()
 
             });
 
 
         bet_field.addEventListener('drop', function(e){
-            let value = dragged_item.dataset.value
 
+            let value = Number(dragged_item.dataset.value)
+            bet_counter += value
+            let bet = document.querySelector(".bet-field > p")
+            bet.innerHTML = bet_counter
             this.appendChild(dragged_item)
 
 
@@ -120,7 +121,7 @@ function initChips(){
 
 
             })
-        }
+
 
 
 
