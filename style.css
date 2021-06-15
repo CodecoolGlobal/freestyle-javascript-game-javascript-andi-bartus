@@ -19,8 +19,10 @@ body{
     align-items: center;
     width: 1500px;
     height: 1000px;
-    background-color: #234e23;
+    background: url(./cards/filc.jpg);
     border-radius: 14%;
+    border: 100px solid black;
+
 }
 
 .container > h1{
@@ -85,12 +87,14 @@ body{
     position: relative;
     top: 2%;
     color: #ffd50a;
+    font-size: 40px;
 }
 
 .player-2 > p{
     position: relative;
     top: 2%;
     color: #ffd50a;
+    font-size: 40px;
 }
 
 .player-1 .active{
