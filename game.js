@@ -14,4 +14,6 @@ function initGame() {
     let player_2 = document.querySelector(".player-2 > p");
     player_2.innerHTML = player2_name
 
+
+
 }

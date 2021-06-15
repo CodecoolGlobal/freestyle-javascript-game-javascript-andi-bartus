@@ -40,9 +40,10 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 100%;
-    width: 80%;
+    width: 100%;
+
 }
 
 .player-1{
@@ -51,9 +52,9 @@ body{
     justify-content: center;
     font-family: fantasy;
     font-weight: bold;
-    width: 40%;
+    width: 30%;
     height: 70%;
-    margin-right: 60px;
+
     border-radius: 10%;
     border:6px solid #ffd50a;
 }
@@ -64,13 +65,20 @@ body{
     justify-content: center;
     font-family: fantasy;
     font-weight: bold;
-    width: 40%;
+    width: 30%;
     height: 70%;
-    margin-left: 60px;
+
     border-radius: 10%;
     border: 6px solid #ffd50a;
 }
 
+.deck{
+    display: flex;
+    border: 6px solid #ffd50a;
+    height: 40%;
+    width: 15%;
+    border-radius: 10%;
+}
 .player-1 > p{
     position: relative;
     top: 2%;
