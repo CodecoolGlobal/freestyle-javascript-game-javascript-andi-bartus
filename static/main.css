@@ -1,11 +1,11 @@
 @font-face {
     font-family: test, 'Oswald', sans-serif;
-    src:@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+    src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 }
 
 body {
-    background: url(../static/casino.jpg)no-repeat;
+    background: url(../static/casino.jpg);
     background-size: 80%;
     background-color: black;
     background-position: top;
@@ -25,38 +25,46 @@ h1 {
             0 0 0.5em #48aef3,
             0 0 1em blue;
     color: #9adbff;
-    margin-bottom: 150px;
+    margin-bottom: 180px;
     opacity: 80%;
 }
 .white{
     width: 300px;
-    height: 300px;
-    background-color: rgba(255, 255, 255, 0.49);
+    height: 150px;
+    background-color: #1b1d38;
+    box-shadow:  0 0 4em #48aef3,
+                 0 0 4em #2f2fa5;
     border-radius: 10px;
     display: flex;
     justify-items: center;
+
     flex-direction: column;
-    opacity: 87%;
+    opacity: 77%;
 
 }
 #menu {
-    width: 266px;
+    width: 280px;
     height: 150px;
-    background-color: rgba(128, 128, 128, 0.58);
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     left: 5%;
     border-radius: 10px;
-    opacity: 97%;
+    opacity: 77%;
 }
 .button {
     border-radius: 10px;
     position: relative;
     top: 10%;
     left: -4%;
-    font-size: 30px;
+    font-family: test, 'Oswald', 'sans-serif';
+    font-variant: small-caps;
+    font-weight: bolder;
+    font-size: 18px;
     color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 input {
     border-radius: 10px;
@@ -66,5 +74,9 @@ input {
     top: 10%;
     left: 5%;
     font-size: 17px;
-    font-family: Droid Sans, serif;
+    font-family: test, 'Oswald', 'sans-serif';
+    font-weight: bolder;
+    font-variant: all-small-caps;
+    color:#9adbff;
+
 }
