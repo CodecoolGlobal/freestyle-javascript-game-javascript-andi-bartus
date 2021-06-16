@@ -7,6 +7,7 @@ html, body {
 
 body{
     background: url(./static/bground.jpg);
+    background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +18,12 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background: url(./cards/filc.jpg);
+    background: url(./cards/filc.jpg) no-repeat ;
+    background-size: 100%;
     width: 75%;
     height: 90%;
     border: 50px solid black;
     border-radius: 15%;
-
 }
 .bet-field{
     display: flex;
