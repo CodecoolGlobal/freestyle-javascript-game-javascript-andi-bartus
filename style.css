@@ -32,12 +32,12 @@ body {
     width: 100%;
     height: 33%;
     border-radius: 100%;
-    margin-bottom: 30%;
     border:0.3vw solid #ffd50a;
 }
 
 .bet-field > img {
     width: 20%;
+    height: 40%;
 }
 
 .container > h1 {
@@ -47,15 +47,6 @@ body {
     color: #d7b506;
     font-weight: bold;
     letter-spacing: 2px;
-    }
-
-.button-container {
-    display: flex;
-    height: 20%;
-    width: 60%;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .player-field {
@@ -66,7 +57,6 @@ body {
     height: 100%;
     width: 100%;
     padding-bottom: 1vw;
-
 }
 
 .player-1-cards {
@@ -101,7 +91,7 @@ body {
     background-size: 8vw;
     display: flex;
     border: 0.2vw solid #ffd50a;
-    height: 90%;
+    height: 40%;
     width: 60%;
     border-radius: 7%;
 }
@@ -111,6 +101,7 @@ body {
     top: 2%;
     color: #ffd50a;
     font-size: 1.7vw;
+    margin-top: 0;
 }
 
 .player-2-cards > p {
@@ -118,6 +109,7 @@ body {
     top: 2%;
     color: #ffd50a;
     font-size: 1.7vw;
+    margin-top: 0;
 }
 
 @keyframes active {
@@ -139,8 +131,8 @@ body {
 }
 
 .button {
-    height: 50%;
-    width: 20%;
+    height: 10%;
+    width: 60%;
     background-color: black;
     color: #f52626;
     font-weight: bold;
@@ -173,6 +165,7 @@ body {
 .table > p {
     color: #ffd50a;
     font-weight: bold;
+    margin-bottom: 20%;
 }
 
 .player-1{
