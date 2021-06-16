@@ -38,7 +38,7 @@ const game = {
                 img.draggable = true;
                 img.addEventListener('dragstart', function (e) {
                     dragged_item = e.target
-                    let dragged_copy = dragged_item.cloneNode(true)
+                    dragged_copy = dragged_item.cloneNode(true)
                 })
             });
             item.addEventListener('dragend', function () {
