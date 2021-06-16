@@ -82,11 +82,15 @@ function initChips(){
     const bet_field = document.querySelector('.bet-field')
     const chips = document.querySelectorAll('.chips')
     let dragged_item = null
+    let dragged_copy = null
     let bet_counter = 0
     for (let item of chips) {
         item.draggable = true
         item.addEventListener('dragstart', function (e) {
             dragged_item = e.target
+            let copy = dragged_item.cloneNode(true)
+            dragged_copy = copy
+
 
         });
 
@@ -113,9 +117,9 @@ function initChips(){
 
             let value = Number(dragged_item.dataset.value)
             bet_counter += value
-            let bet = document.querySelector(".bet-field > p")
+            let bet = document.querySelector(".table > p")
             bet.innerHTML = bet_counter
-            this.appendChild(dragged_item)
+            this.appendChild(dragged_copy)
 
 
 
