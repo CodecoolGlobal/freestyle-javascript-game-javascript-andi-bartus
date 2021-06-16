@@ -197,6 +197,10 @@ body {
     display: flex;
 }
 
+.counter > p{
+    color: #ffd50a;
+}
+
 .player-2 {
     display: flex;
     flex-direction: column;
