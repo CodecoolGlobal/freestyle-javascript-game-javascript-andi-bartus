@@ -114,7 +114,11 @@ const game = {
         })
     },
     initStart: () => {
-        document.querySelector(".start").addEventListener("click", game.playerRound)
+        document.querySelector(".start").addEventListener("click", function(){
+            document.querySelector(".start").classList.add('hidden')
+            game.playerRound()
+
+        })
     },
     initPlayers:() => {
         let names = [document.querySelector(".player-1-cards > p").innerHTML,
