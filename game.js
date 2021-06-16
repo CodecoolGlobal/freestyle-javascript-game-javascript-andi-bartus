@@ -45,6 +45,8 @@ function initGame() {
     let score2 = 0
 
 
+
+
     function hit_player () {
 
         let hit_button = document.querySelector(".hit");
@@ -58,9 +60,15 @@ function initGame() {
             let score = document.querySelector(player_score)
             if (player_score === '#p2_score > p'){
                 score2 += random_card.Weight
+                if (score2 === 21){
+            alert(player2_name + "won the game!")
+        }
             }
             else if (player_score === '#p1_score > p'){
                 score1 += random_card.Weight
+                if (score1 === 21){
+            alert(player1_name + "won the game!")
+        }
             }
             console.log(score1)
             console.log(score2)
@@ -78,18 +86,14 @@ function initGame() {
             document.querySelector(".player-2-cards").classList.add("active")
         })
     }
-    function win(){
-        if (score1 === 21){
-            alert(player1_name + "won the game!")
-        }
-        else if (score2 === 21){
-            alert(player2_name + "won the game!")
-        }
+    function win() {
+        if ((21 - score1) < (21 - scoreD)){
 
+        }
     }
+
     stay()
     hit_player()
-    win()
 
 
 
