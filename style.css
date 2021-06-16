@@ -86,8 +86,7 @@ body{
     font-weight: bold;
     width: 90%;
     height: 70%;
-    margin-top: 12%;
-
+    margin-top: 0%;
     border-radius: 10%;
     border:0.5vw solid #ffd50a;
 }
@@ -100,7 +99,7 @@ body{
     font-weight: bold;
     width: 90%;
     height: 70%;
-    margin-top: 20%;
+    margin-top: 0%;
     border-radius: 10%;
     border: 0.5vw solid #ffd50a;
 
@@ -112,7 +111,7 @@ body{
     background-size: 8vw;
     display: flex;
     border: 0.2vw solid #ffd50a;
-    height: 45%;
+    height: 90%;
     width: 60%;
     border-radius: 7%;
 }
@@ -207,7 +206,7 @@ body{
     flex-direction: row;
 }
 .chip > img {
-    max-width: 60%;
+    max-width: 50%;
     height: auto;
     background-color: transparent;
 

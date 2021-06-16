@@ -41,6 +41,8 @@ function initGame() {
     let hand = '#p1_hand'
     let player_score = '#p1_score > p'
     let count = 0
+    let score1 = 0
+    let score2 = 0
 
 
     function hit_player () {
@@ -52,7 +54,16 @@ function initGame() {
             hand_img.src = `./cards/${random_card.Value}${random_card.Suit}.png`
             hand_img.classList.add("card")
             document.querySelector(hand).appendChild(hand_img)
+
             let score = document.querySelector(player_score)
+            if (player_score === '#p2_score > p'){
+                score2 += random_card.Weight
+            }
+            else if (player_score === '#p1_score > p'){
+                score1 += random_card.Weight
+            }
+            console.log(score1)
+            console.log(score2)
             count += random_card.Weight
             score.innerHTML = "Score: " + count
         })
@@ -67,8 +78,18 @@ function initGame() {
             document.querySelector(".player-2-cards").classList.add("active")
         })
     }
+    function win(){
+        if (score1 === 21){
+            alert(player1_name + "won the game!")
+        }
+        else if (score2 === 21){
+            alert(player2_name + "won the game!")
+        }
+
+    }
     stay()
     hit_player()
+    win()
 
 
 
