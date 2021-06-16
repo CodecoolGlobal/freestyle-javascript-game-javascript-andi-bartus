@@ -20,8 +20,7 @@ function initGame() {
     let values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
     let deck = [];
 
-    function createDeck()
-    {
+    function createDeck() {
         deck = [];
         for (let i = 0 ; i < values.length; i++)
         {
@@ -85,18 +84,11 @@ function initGame() {
         else if (score2 === 21){
             alert(player2_name + "won the game!")
         }
-
     }
     stay()
     hit_player()
     win()
-
-
-
-
-
-
-    }
+}
 
 
 function initChips(){
@@ -142,17 +134,6 @@ function initChips(){
             bet.innerHTML = bet_counter
             this.appendChild(dragged_copy)
 
-
-
-
-
-
-
-            })
-
-
-
-
-
-    }
+        })
+}
 
