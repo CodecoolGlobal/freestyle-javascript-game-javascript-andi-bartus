@@ -145,5 +145,4 @@ const game = {
         game.initStay()
     },
 }
-
 game.initGame()
