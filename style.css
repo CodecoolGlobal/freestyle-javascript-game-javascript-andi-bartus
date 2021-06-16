@@ -1,11 +1,9 @@
-
-
 html, body {
     margin: 0;
     height: 100%;
 }
 
-body{
+body {
     background: url(./static/bground.jpg);
     background-size: 100%;
     display: flex;
@@ -13,7 +11,7 @@ body{
     align-items: center;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -25,6 +23,7 @@ body{
     border: 50px solid black;
     border-radius: 15%;
 }
+
 .bet-field{
     display: flex;
     justify-content: center ;
@@ -35,26 +34,22 @@ body{
     border-radius: 100%;
     margin-bottom: 30%;
     border:0.3vw solid #ffd50a;
-
-
-    }
-.bet-field > img{
-    width: 20%;
-
-
 }
 
-.container > h1{
+.bet-field > img {
+    width: 20%;
+}
+
+.container > h1 {
     font-family: "Fira Code Retina";
     font-size: 2vw;
     text-shadow: 6px 5px #2d2c29;
     color: #d7b506;
     font-weight: bold;
     letter-spacing: 2px;
-
     }
 
-.button-container{
+.button-container {
     display: flex;
     height: 20%;
     width: 60%;
@@ -63,7 +58,7 @@ body{
     justify-content: space-around;
 }
 
-.player-field{
+.player-field {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -74,7 +69,7 @@ body{
 
 }
 
-.player-1-cards{
+.player-1-cards {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +82,7 @@ body{
     border:0.5vw solid #ffd50a;
 }
 
-.player-2-cards{
+.player-2-cards {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,10 +93,9 @@ body{
     margin-top: 0%;
     border-radius: 10%;
     border: 0.5vw solid #ffd50a;
-
 }
 
-.deck{
+.deck {
     background: url(./cards/purple_back.png) no-repeat;
     background-position: center;
     background-size: 8vw;
@@ -111,39 +105,42 @@ body{
     width: 60%;
     border-radius: 7%;
 }
-.player-1-cards > p{
+
+.player-1-cards > p {
     position: relative;
     top: 2%;
     color: #ffd50a;
     font-size: 1.7vw;
 }
 
-.player-2-cards > p{
+.player-2-cards > p {
     position: relative;
     top: 2%;
     color: #ffd50a;
     font-size: 1.7vw;
 }
+
 @keyframes active {
     0% {border-color: red}
     50% {border-color: yellow}
     100% {border-color: red}
 }
-.active{
+
+.active {
     animation-name: active;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
+
 @keyframes button {
     0% {background-color: red}
     50% {background-color: black}
     100% {background-color: red}
 }
 
-.button{
+.button {
     height: 50%;
     width: 20%;
-
     background-color: black;
     color: #f52626;
     font-weight: bold;
@@ -151,7 +148,6 @@ body{
     font-size: 1.6vw;
     border-radius: 10%;
     border-style: dotted;
-
 }
 
 .button:hover {
@@ -165,22 +161,20 @@ body{
   height: auto;
 }
 
-
-.table{
+.table {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 20%;
     height: 100%;
-
-
 }
 
-.table > p{
+.table > p {
     color: #ffd50a;
     font-weight: bold;
 }
+
 .player-1{
     display: flex;
     flex-direction: column;
@@ -190,12 +184,11 @@ body{
     height: 100%;
 }
 
-.chip{
+.chip {
     display: flex;
-
 }
 
-.player-2{
+.player-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -203,27 +196,29 @@ body{
     width: 40%;
     height: 100%;
 }
-.chips{
+
+.chips {
     display: flex;
     flex-direction: row;
 }
+
 .chip > img {
     max-width: 50%;
     height: auto;
     background-color: transparent;
-
 }
 
-.counter{
+.counter {
     color: #ffd50a;
 }
-.score{
+
+.score {
     font-size: 20px;
     color: #ffd50a;
     font-weight: bold;
 }
 
-.asd{
+.asd {
     width: 200px;
     height: 90px;
 }
