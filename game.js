@@ -8,18 +8,23 @@ function initNames() {
     console.log(`${player1_name}, ${player2_name}`)
 }
 
-function initChips() {
+function initChips(){
     const bet_field = document.querySelector('.bet-field')
     const chips = document.querySelectorAll('.chips')
     let dragged_item = null
     let dragged_copy = null
     let bet_counter = 0
     for (let item of chips) {
-        item.draggable = true
-        item.addEventListener('dragstart', function (e) {
-            dragged_item = e.target
-            let dragged_copy = dragged_item.cloneNode(true)
+        item.querySelectorAll('img').forEach(img => {
+            img.draggable = true;
+            img.addEventListener('dragstart', function (e) {
+                dragged_item = e.target
+                let copy = dragged_item.cloneNode(true)
+                dragged_copy = copy
+            })
         });
+
+
         item.addEventListener('dragend', function () {
             setTimeout(function () {
                 dragged_item.style.display = 'block';
@@ -27,19 +32,30 @@ function initChips() {
             }, 0)
         });
     }
+
     bet_field.addEventListener('dragover', function (e) {
         e.preventDefault()
     });
+
     bet_field.addEventListener('dragenter', function (e) {
         e.preventDefault()
+
     });
+
+
     bet_field.addEventListener('drop', function (e) {
+        e.preventDefault()
         let value = Number(dragged_item.dataset.value)
         bet_counter += value
         let bet = document.querySelector(".table > p")
         bet.innerHTML = bet_counter
         this.appendChild(dragged_copy)
-    })
+        dragged_item.dataset.pc = String(Number(dragged_item.dataset.pc) - 1);
+        dragged_item.nextSibling.innerHTML = String(Number(dragged_item.nextSibling.innerHTML) - 1)
+        if (dragged_item.dataset.pc === "0") {
+            dragged_item.draggable = false
+
+        }
 }
 
 function createDeck() {

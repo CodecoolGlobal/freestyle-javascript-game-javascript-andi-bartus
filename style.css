@@ -24,7 +24,7 @@ body {
     border-radius: 15%;
 }
 
-.bet-field{
+.drop-zone{
     display: flex;
     justify-content: center ;
     align-content: center;
@@ -38,6 +38,22 @@ body {
 .bet-field > img {
     width: 20%;
     height: 40%;
+    position: relative;
+
+}
+
+.bet-field {
+    display: flex;
+    justify-content: center ;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 70%;
+    overflow: paged-x;
+}
+
+[data-value="5"] {
+
 }
 
 .container > h1 {
@@ -179,6 +195,10 @@ body {
 
 .chip {
     display: flex;
+}
+
+.counter > p{
+    color: #ffd50a;
 }
 
 .player-2 {
