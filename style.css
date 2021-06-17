@@ -49,8 +49,6 @@ body {
 
 .bet-field > img {
     width: 20%;
-    /*height: 40%;*/
-
 }
 
 .bet-field {
@@ -70,6 +68,7 @@ body {
     opacity: 40%;
     z-index: 0;
     position: absolute;
+    text-shadow: none;
 
 }
 
