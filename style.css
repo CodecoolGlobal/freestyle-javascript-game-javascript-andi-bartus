@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 @font-face {
     font-family: test, 'Oswald', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 }
 *{
-    font-family: "Fira Code Retina";
+    font-family: 'Oswald', sans-serif;
     text-shadow: 6px 5px #2d2c29;
 }
 
@@ -64,6 +66,7 @@ body {
 
 .bet-field > h1{
     top: 53%;
+    font-family: 'Oswald', sans-serif;;
     color: #ffd50a;
     opacity: 40%;
     z-index: 0;
