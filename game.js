@@ -3,6 +3,7 @@ const game = {
     player2: undefined,
     deck: undefined,
     dealer: undefined,
+    dealerInterval: undefined,
     initDeck: () => {
         let suits = ["S", "H", "D", "C"];
         let values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
@@ -89,61 +90,64 @@ const game = {
             player = game.dealer;
         }
         let randomCard = game.deck[Math.floor(Math.random() * (game.deck.length - 1))];
-        if (player === game.player1 || player === game.player2) {
             let newCard = document.createElement('img');
             newCard.src = `./cards/${randomCard.Value}${randomCard.Suit}.png`;
             newCard.classList.add("card");
             player.Hand.appendChild(newCard);
-        }
-        else{
-            let newCard = document.createElement("p");
-            newCard.innerHTML = `${randomCard.Value}${randomCard.Suit}`;
-            player.Hand.appendChild(newCard);
-        }
         let newScore = player.ScoreInt + randomCard.Weight;
         player.Score.innerHTML = `Score: ${newScore.toString()}`;
         player.ScoreInt = newScore;
         game.checkBust(player)
     },
     checkBust: (player) => {
-        if (game.player.ScoreInt > 21){
-            game.player.Hand.classList.add('bust')
-            game.Stay()
+        if (player.ScoreInt > 21){
+            player.Hand.classList.add('bust')
+            game.stay()
         }
     },
     checkWinner: () => {
-        if (game.player1.ScoreInt > game.dealer.scoreInt) {
+        if (game.player1.ScoreInt > game.dealer.ScoreInt) {
             game.player1.Hand.classList.add('Win')
         }
         else {
             game.player1.Hand.classList.add('Lose')
         }
-        if (game.player2.ScoreInt > game.dealer.scoreInt) {
+        console.log(game.player1.Hand.classList)
+        if (game.player2.ScoreInt > game.dealer.ScoreInt) {
             game.player2.Hand.classList.add('Win')
         }
         else {
             game.player2.Hand.classList.add('Lose')
         }
+        console.log(game.player2.Hand.classList)
         if (game.player1.Hand.classList.contains('Lose') && game.player2.Hand.classList.contains('Lose')) {
             game.dealer.Hand.classList.add('Win')
         }
         if (game.player1.Hand.classList.contains('Win') && game.player2.Hand.classList.contains('Win')){
-            if (game.player1.ScoreInt > game.player2.scoreInt) {
+            if (game.player1.ScoreInt > game.player2.ScoreInt) {
                 game.player2.Hand.classList.remove('Win')
             }
             else {
                 game.player1.Hand.classList.remove('Win')
             }
+            console.log(game.player1.Hand.classList)
+            console.log(game.player2.Hand.classList)
         }
 
     },
-    win: (player) => {
+    win: () => {
         game.checkWinner()
-        if (game.player.Hand.classList.contains('Win')) {
-            alert(game.player.Name + " won the game!")
+        if (game.player1.Hand.classList.contains('Win')) {
+            alert(game.player1.Name + " won the game!")
+        }
+        else if (game.player2.Hand.classList.contains('Win')){
+            alert(game.player1.Name + " won the game!")
+        }
+        else if (game.dealer.Hand.classList.contains('Win')) {
+            alert(game.dealer.Name + " won the game!")
         }
     },
-    Stay: () => {
+    stay: () => {
         let active = document.querySelector(".active");
         if (active.classList.contains("player-1-cards")) {
             document.querySelector(".deck").removeEventListener("click", game.getNewCard);
@@ -153,12 +157,25 @@ const game = {
         } else if (active.classList.contains("player-2-cards")) {
             active.classList.remove("active");
             document.querySelector(".deck").removeEventListener("click", game.getNewCard);
-            document.querySelector(".dealer_hand").classList.add("active");
-            game.playerRound();
+            document.querySelector(".dealer-hand").classList.add("active");
+            game.setDealerInterval();
         }
     },
-    initStay: () =>{
-        document.querySelector(".stay").addEventListener('click', game.Stay)
+    initStay: () => {
+        document.querySelector(".stay").addEventListener('click', game.stay)
+    },
+    setDealerInterval: () => {
+        game.dealerInterval = setInterval(game.dealerRound, 1000)
+    },
+    dealerRound: () => {
+        if (game.dealer.ScoreInt <= 16){
+            game.getNewCard()
+            console.log(game.dealer)
+        }
+        else{
+            clearInterval(game.dealerInterval)
+            game.win()
+        }
     },
     initStart: () => {
         document.querySelector(".stay").classList.add('hidden')
@@ -187,26 +204,24 @@ const game = {
                 game.player2 = player;
             }
             console.log(player)
-            game.win(player)
         }
 
     },
+    initDealer: () => {
+        game.dealer = {
+            Hand: document.querySelector(".dealer-hand"),
+            Score: document.querySelector(".dealer-score"),
+            ScoreInt: 0
+        }
+    },
     initGame: () => {
+        game.initStart()
         game.initDeck()
         game.initNames()
         game.initDealer()
         game.initPlayers()
         game.initChips()
-        game.initStart()
         game.initStay()
-    },
-    initDealer: () => {
-        game.dealer = {
-            hand: document.querySelector(".dealer_hand"),
-            score: document.querySelector("dealer_score"),
-            scoreInt: 0
-        }
     }
 }
-
 game.initGame()

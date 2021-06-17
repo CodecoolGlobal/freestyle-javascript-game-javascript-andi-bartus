@@ -5,7 +5,6 @@
 }
 *{
     font-family: "Fira Code Retina";
-
     text-shadow: 6px 5px #2d2c29;
 }
 
@@ -44,12 +43,12 @@ body {
     height: 33%;
     border-radius: 100%;
     border:0.3vw solid #ffd50a;
+    margin-top: 5%;
 }
 
 .bet-field > img {
     width: 20%;
     height: 40%;
-    position: relative;
 
 }
 
@@ -61,9 +60,15 @@ body {
     width: 70%;
     height: 70%;
     overflow: paged-x;
+    position: relative;
 }
 
-[data-value="5"] {
+.bet-field > h1{
+    top: 53%;
+    color: #ffd50a;
+    opacity: 30%;
+    z-index: 0;
+    position: absolute;
 
 }
 
@@ -75,15 +80,22 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
 }
+.dealer-field{
+    display: flex;
+    flex-direction: row;
+    height: 25%;
+    width: 100%;
+}
 
 .player-field {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-around;
-    height: 100%;
+    height: 75%;
     width: 100%;
     padding-bottom: 1vw;
+
 }
 
 .player-1-cards {
@@ -94,7 +106,7 @@ body {
     font-weight: bold;
     width: 90%;
     height: 70%;
-    margin-top: 0%;
+    margin-top: 0;
     border-radius: 10%;
     border:0.5vw solid #ffd50a;
 }
@@ -108,18 +120,16 @@ body {
     font-weight: bolder;
     width: 90%;
     height: 70%;
-    margin-top: 0%;
+    margin-top: 0;
     border-radius: 10%;
     border: 0.5vw solid #ffd50a;
 }
 
 .deck {
-    background: url(./cards/purple_back.png) no-repeat;
-    background-position: center;
-    background-size: 8vw;
+    background: url(./cards/purple_back.png) no-repeat center;
+    background-size: 80%;
     display: flex;
-
-    height: 40%;
+    height: 45%;
     width: 60%;
 
 }
@@ -184,7 +194,7 @@ body {
 .table {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     width: 20%;
     height: 100%;
@@ -193,7 +203,7 @@ body {
 .table > p {
     color: #ffd50a;
     font-weight: bold;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
     font-size: 1.8vw;
 }
 
@@ -208,8 +218,9 @@ body {
 
 .chip {
     display: flex;
+    align-items: center;
+    justify-content: center;
 
-    text-align: center;
 }
 
 
@@ -231,11 +242,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-items: center;
-    align-items: center;
-    align-items: center;
+    align-content: center;
+
+
 }
 
 .chip > img {
+
     max-width: 50%;
     height: auto;
     background-color: transparent;
