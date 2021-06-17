@@ -168,20 +168,20 @@ body {
 .button {
     height: 10%;
     width: 55%;
-    background-color: black;
-    color: #f52626;
+    background-color: transparent;
     font-weight: bolder;
+    color: white;
     font-family: test, 'Oswald', 'sans-serif';
-    font-size: 1.2vw;
+    font-size: 1vw;
     border-radius: 10%;
-    border-style: dotted;
+    border-style: dot-dot-dash;
+    border-width: thick;
+    text-shadow: none;
+    border-color: #ffd50a;
+    opacity: 80%;
 }
 
-.button:hover {
-    animation-name: button;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
+
 
 .card{
     max-width: 25%;
@@ -223,6 +223,7 @@ body {
 
 .counter {
     font-size: 1.5vw;
+    opacity: 92%;
 
 }
 
