@@ -37,9 +37,13 @@ const game = {
         for (let item of chips) {
             item.querySelectorAll('img').forEach(img => {
                 img.draggable = true;
+
+
                 img.addEventListener('dragstart', function (e) {
                     dragged_item = e.target
-                    let dragged_copy = dragged_item.cloneNode(true)
+
+
+                    dragged_copy = dragged_item.cloneNode(true)
                 })
             });
             item.addEventListener('dragend', function () {
@@ -125,7 +129,13 @@ const game = {
         })
     },
     initStart: () => {
-        document.querySelector(".start").addEventListener("click", game.playerRound)
+        document.querySelector(".stay").classList.add('hidden')
+        document.querySelector(".start").addEventListener("click", function(){
+            document.querySelector(".start").classList.add('hidden')
+            document.querySelector(".stay").classList.remove('hidden')
+            game.playerRound()
+
+        })
     },
     initPlayers:() => {
         let names = [document.querySelector(".player-1-cards > p").innerHTML,

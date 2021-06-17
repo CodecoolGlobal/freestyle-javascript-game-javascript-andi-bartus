@@ -1,3 +1,14 @@
+@font-face {
+    font-family: test, 'Oswald', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+}
+*{
+    font-family: "Fira Code Retina";
+
+    text-shadow: 6px 5px #2d2c29;
+}
+
 html, body {
     margin: 0;
     height: 100%;
@@ -79,7 +90,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: fantasy;
+    font-family: test, 'Oswald', 'sans-serif';
     font-weight: bold;
     width: 90%;
     height: 70%;
@@ -90,10 +101,11 @@ body {
 
 .player-2-cards {
     display: flex;
+
     flex-direction: column;
     align-items: center;
-    font-family: fantasy;
-    font-weight: bold;
+    font-family: test, 'Oswald', 'sans-serif';
+    font-weight: bolder;
     width: 90%;
     height: 70%;
     margin-top: 0%;
@@ -106,17 +118,17 @@ body {
     background-position: center;
     background-size: 8vw;
     display: flex;
-    border: 0.2vw solid #ffd50a;
+
     height: 40%;
     width: 60%;
-    border-radius: 7%;
+
 }
 
 .player-1-cards > p {
     position: relative;
     top: 2%;
     color: #ffd50a;
-    font-size: 1.7vw;
+    font-size: 1.2vw;
     margin-top: 0;
 }
 
@@ -124,7 +136,7 @@ body {
     position: relative;
     top: 2%;
     color: #ffd50a;
-    font-size: 1.7vw;
+    font-size: 1.2vw;
     margin-top: 0;
 }
 
@@ -148,12 +160,12 @@ body {
 
 .button {
     height: 10%;
-    width: 60%;
+    width: 55%;
     background-color: black;
     color: #f52626;
-    font-weight: bold;
-    font-family: "Fira Code Retina";
-    font-size: 1.6vw;
+    font-weight: bolder;
+    font-family: test, 'Oswald', 'sans-serif';
+    font-size: 1.2vw;
     border-radius: 10%;
     border-style: dotted;
 }
@@ -182,6 +194,7 @@ body {
     color: #ffd50a;
     font-weight: bold;
     margin-bottom: 20%;
+    font-size: 1.8vw;
 }
 
 .player-1{
@@ -195,10 +208,14 @@ body {
 
 .chip {
     display: flex;
+
+    text-align: center;
 }
 
-.counter > p{
-    color: #ffd50a;
+
+.counter {
+    font-size: 1.5vw;
+
 }
 
 .player-2 {
@@ -213,6 +230,8 @@ body {
 .chips {
     display: flex;
     flex-direction: row;
+    justify-items: center;
+    align-items: center;
     align-items: center;
 }
 
@@ -223,7 +242,11 @@ body {
 }
 
 .counter {
-    color: #ffd50a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color:white;
 }
 
 .score {
@@ -235,4 +258,9 @@ body {
 .asd {
     width: 200px;
     height: 90px;
+}
+
+
+.hidden{
+    visibility: hidden;
 }
