@@ -8,6 +8,9 @@
 *{
     font-family: 'Oswald', sans-serif;
     text-shadow: 6px 5px #2d2c29;
+    color: white;
+
+
 }
 
 html, body {
@@ -27,8 +30,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
-    background: url(./cards/filc.jpg) no-repeat ;
+    align-content: center;
+    background: url(./cards/red-soft-carpet-texture-background.jpg) no-repeat ;
     background-size: 100%;
     width: 75%;
     height: 90%;
@@ -69,8 +72,8 @@ body {
 .bet-field > h1{
     top: 53%;
     font-family: 'Oswald', sans-serif;;
-    color: #ffd50a;
-    opacity: 40%;
+    color: black;
+    opacity: 70%;
     z-index: 0;
     position: absolute;
     text-shadow: none;
@@ -88,7 +91,6 @@ body {
 .player-field {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
     justify-content: space-around;
     height: 75%;
     width: 100%;
@@ -106,7 +108,7 @@ body {
     height: 70%;
     margin-top: 0;
     border-radius: 10%;
-    border:0.5vw solid #ffd50a;
+    border:0.32vw solid #ffd50a;
     opacity: 85%;
 }
 
@@ -121,7 +123,7 @@ body {
     height: 70%;
     margin-top: 0;
     border-radius: 10%;
-    border: 0.5vw solid #ffd50a;
+    border: 0.32vw solid #ffd50a;
     opacity: 85%;
 }
 
@@ -129,7 +131,7 @@ body {
     background: url(./cards/purple_back.png) no-repeat center;
     background-size: 80%;
     display: flex;
-    height: 45%;
+    height: 50%;
     width: 60%;
 
 }
@@ -137,7 +139,6 @@ body {
 .player-1-cards > p {
     position: relative;
     top: 2%;
-    color: #ffd50a;
     font-size: 1.2vw;
     margin-top: 0;
 }
@@ -145,16 +146,15 @@ body {
 .player-2-cards > p {
     position: relative;
     top: 2%;
-    color: #ffd50a;
     font-size: 1.2vw;
     margin-top: 0;
 }
 
 @keyframes active {
-    0% {border-color: #015501
+    0% {border-color: black
     }
     50% {border-color: yellow}
-    100% {border-color: #015501}
+    100% {border-color: black}
 }
 
 .active {
@@ -188,8 +188,8 @@ body {
 
 
 .card{
-    max-width: 25%;
-  height: auto;
+    width: 22%;
+
 }
 
 .table {
@@ -202,7 +202,6 @@ body {
 }
 
 .table > p {
-    color: #ffd50a;
     font-weight: bold;
     margin-bottom: 15%;
     font-size: 1.8vw;
@@ -266,8 +265,7 @@ body {
 
 .score {
     font-size: 20px;
-    color: #ffd50a;
-    font-weight: bold;
+
 }
 
 .asd {
@@ -285,14 +283,17 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-content: center;
-    width: 100%;
-    height: 100%;
+    align-items: center;
+    width: 1200px;
+    height: 216px;
+
+
 }
 
 .dealer-hand > img{
-    height: 70%;
-    margin-top: 2%
+    height: 150px;
+    width: 110px;
+
 }
 
 .dealer-score{
