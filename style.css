@@ -72,7 +72,7 @@ body {
 .bet-field > h1{
     top: 43%;
     font-family: 'Oswald', sans-serif;;
-    color: black;
+    color: rgba(0, 0, 0, 0.53);
     opacity: 70%;
     z-index: 0;
     position: absolute;
@@ -163,12 +163,6 @@ body {
     animation-iteration-count: infinite;
 }
 
-@keyframes button {
-    0% {background-color: red}
-    50% {background-color: black}
-    100% {background-color: red}
-}
-
 .button {
     height: 10%;
     width: 50%;
@@ -181,7 +175,7 @@ body {
     border-style: dot-dot-dash;
     border-width: thick;
     text-shadow: none;
-    border-color: #ffd50a;
+    border-color: white;
     opacity: 80%;
 }
 
@@ -345,10 +339,21 @@ body {
     border-style: dot-dot-dash;
     border-width: thick;
     border-color: #ffd50a;
-    opacity: 80%;
+    /*opacity: 80%;*/
+    animation-name: button;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin-bottom: 61%;
 }
 
 .win-window.hidden {
     visibility: hidden;
 }
 
+@keyframes button {
+    0% {background-color: blue}
+    25% {background-color: red}
+    50% {background-color: green}
+    75% {background-color: yellow}
+    100% {background-color: blue}
+}
