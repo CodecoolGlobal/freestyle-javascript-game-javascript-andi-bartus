@@ -316,6 +316,9 @@ body {
     text-shadow: none;
     color: white;
     font-size: 4vw;
+    animation-name: win;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .restart-form {
@@ -336,14 +339,10 @@ body {
     color: white;
     font-family: test, 'Oswald', 'sans-serif';
     font-size: 1vw;
-    border-style: dot-dot-dash;
-    border-width: thick;
-    border-color: #ffd50a;
-    /*opacity: 80%;*/
     animation-name: button;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    margin-bottom: 61%;
+    margin-bottom: 62%;
 }
 
 .win-window.hidden {
@@ -352,8 +351,26 @@ body {
 
 @keyframes button {
     0% {background-color: blue}
+    0% {box-shadow: 0 0 1em blue}
     25% {background-color: red}
+    25% {box-shadow: 0 0 1em red}
     50% {background-color: green}
+    50% {box-shadow: 0 0 1em green}
     75% {background-color: yellow}
+    75% {box-shadow: 0 0 1em yellow}
     100% {background-color: blue}
+    100% {box-shadow: 0 0 1em blue}
+}
+
+@keyframes win {
+    0% {color: blue}
+    0% {text-shadow: 0 0 1em blue}
+    25% {color: red}
+    25% {text-shadow: 0 0 1em red}
+    50% {color: green}
+    50% {text-shadow: 0 0 1em green}
+    75% {color: yellow}
+    75% {text-shadow: 0 0 1em yellow}
+    100% {color: blue}
+    100% {text-shadow: 0 0 1em blue}
 }
