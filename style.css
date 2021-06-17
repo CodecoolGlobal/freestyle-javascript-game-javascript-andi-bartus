@@ -43,12 +43,13 @@ body {
     height: 33%;
     border-radius: 100%;
     border:0.3vw solid #ffd50a;
+    opacity: 85%;
     margin-top: 5%;
 }
 
 .bet-field > img {
     width: 20%;
-    height: 40%;
+    /*height: 40%;*/
 
 }
 
@@ -66,20 +67,13 @@ body {
 .bet-field > h1{
     top: 53%;
     color: #ffd50a;
-    opacity: 30%;
+    opacity: 40%;
     z-index: 0;
     position: absolute;
 
 }
 
-.container > h1 {
-    font-family: "Fira Code Retina";
-    font-size: 2vw;
-    text-shadow: 6px 5px #2d2c29;
-    color: #d7b506;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
+
 .dealer-field{
     display: flex;
     flex-direction: row;
@@ -109,6 +103,7 @@ body {
     margin-top: 0;
     border-radius: 10%;
     border:0.5vw solid #ffd50a;
+    opacity: 85%;
 }
 
 .player-2-cards {
@@ -123,6 +118,7 @@ body {
     margin-top: 0;
     border-radius: 10%;
     border: 0.5vw solid #ffd50a;
+    opacity: 85%;
 }
 
 .deck {
@@ -151,9 +147,10 @@ body {
 }
 
 @keyframes active {
-    0% {border-color: red}
+    0% {border-color: #015501
+    }
     50% {border-color: yellow}
-    100% {border-color: red}
+    100% {border-color: #015501}
 }
 
 .active {
@@ -171,20 +168,20 @@ body {
 .button {
     height: 10%;
     width: 55%;
-    background-color: black;
-    color: #f52626;
+    background-color: transparent;
     font-weight: bolder;
+    color: white;
     font-family: test, 'Oswald', 'sans-serif';
-    font-size: 1.2vw;
+    font-size: 1vw;
     border-radius: 10%;
-    border-style: dotted;
+    border-style: dot-dot-dash;
+    border-width: thick;
+    text-shadow: none;
+    border-color: #ffd50a;
+    opacity: 80%;
 }
 
-.button:hover {
-    animation-name: button;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
+
 
 .card{
     max-width: 25%;
@@ -226,6 +223,7 @@ body {
 
 .counter {
     font-size: 1.5vw;
+    opacity: 92%;
 
 }
 

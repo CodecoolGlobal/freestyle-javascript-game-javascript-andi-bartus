@@ -30,41 +30,46 @@ h1 {
 }
 .white{
     width: 300px;
-    height: 150px;
-    background-color: #1b1d38;
-    box-shadow:  0 0 4em #48aef3,
-                 0 0 4em #2f2fa5;
-    border-radius: 10px;
+    height: 180px;
+
     display: flex;
     justify-items: center;
-
+    align-items: flex-start;
     flex-direction: column;
     opacity: 77%;
 
 }
 #menu {
-    width: 280px;
-    height: 150px;
+    background-color: #1b1d38;
+    box-shadow:  0 0 4em #48aef3,
+                 0 0 4em #2f2fa5;
+    border-radius: 10px;
+    width: 320px;
+    height: 300px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
     position: relative;
     left: 5%;
     border-radius: 10px;
     opacity: 77%;
 }
 .button {
-    border-radius: 10px;
+
+    border-style: dot-dot-dash;
     position: relative;
     top: 10%;
-    left: -4%;
+    left: 45%;
     font-family: test, 'Oswald', 'sans-serif';
     font-variant: small-caps;
     font-weight: bolder;
-    font-size: 18px;
-    color: black;
+    font-size: 20px;
+    color: #48aef3;
     margin-top: 10px;
     margin-bottom: 20px;
+    background-color: transparent;
+
 }
 input {
     border-radius: 10px;
@@ -73,10 +78,10 @@ input {
     position: relative;
     top: 10%;
     left: 5%;
-    font-size: 17px;
+    font-size: 20px;
     font-family: test, 'Oswald', 'sans-serif';
     font-weight: bolder;
     font-variant: all-small-caps;
-    color:#9adbff;
+    color: #48aef3;
 
 }
