@@ -210,7 +210,7 @@ const game = {
         game.dealer = {
             Name: "Dealer",
             Hand: document.querySelector(".dealer-hand"),
-            Score: document.querySelector(".dealer-score"),
+            Score: document.querySelector(".dealer-score > p"),
             ScoreInt: 0
         }
     },
