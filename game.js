@@ -36,8 +36,12 @@ const game = {
         for (let item of chips) {
             item.querySelectorAll('img').forEach(img => {
                 img.draggable = true;
+
+
                 img.addEventListener('dragstart', function (e) {
                     dragged_item = e.target
+
+
                     dragged_copy = dragged_item.cloneNode(true)
                 })
             });
@@ -114,8 +118,10 @@ const game = {
         })
     },
     initStart: () => {
+        document.querySelector(".stay").classList.add('hidden')
         document.querySelector(".start").addEventListener("click", function(){
             document.querySelector(".start").classList.add('hidden')
+            document.querySelector(".stay").classList.remove('hidden')
             game.playerRound()
 
         })
