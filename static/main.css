@@ -56,7 +56,8 @@ h1 {
     opacity: 77%;
 }
 .button {
-    border-radius: 10px;
+
+    border-style: dot-dot-dash;
     position: relative;
     top: 10%;
     left: 45%;
@@ -64,10 +65,10 @@ h1 {
     font-variant: small-caps;
     font-weight: bolder;
     font-size: 20px;
-    color: black;
+    color: #48aef3;
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: #9adbff;
+    background-color: transparent;
 
 }
 input {
@@ -81,6 +82,6 @@ input {
     font-family: test, 'Oswald', 'sans-serif';
     font-weight: bolder;
     font-variant: all-small-caps;
-    color:#9adbff;
+    color: #48aef3;
 
 }
