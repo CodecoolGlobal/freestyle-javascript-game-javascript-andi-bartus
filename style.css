@@ -31,7 +31,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-content: center;
-    background: url(./cards/red-soft-carpet-texture-background.jpg) no-repeat ;
+    background: url(./cards/poker-table-background-green-color_47243-1068.jpg) no-repeat ;
     background-size: 100%;
     width: 75%;
     height: 90%;
@@ -128,7 +128,7 @@ body {
 }
 
 .deck {
-    background: url(./cards/purple_back.png) no-repeat center;
+    background: url(./cards/red_back.png) no-repeat center;
     background-size: 80%;
     display: flex;
     height: 50%;
@@ -151,10 +151,10 @@ body {
 }
 
 @keyframes active {
-    0% {border-color: black
+    0% {border-color: white;
     }
     50% {border-color: yellow}
-    100% {border-color: black}
+    100% {border-color: white}
 }
 
 .active {
