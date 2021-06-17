@@ -43,6 +43,7 @@ body {
     height: 33%;
     border-radius: 100%;
     border:0.3vw solid #ffd50a;
+    opacity: 85%;
     margin-top: 5%;
 }
 
@@ -66,20 +67,13 @@ body {
 .bet-field > h1{
     top: 53%;
     color: #ffd50a;
-    opacity: 30%;
+    opacity: 40%;
     z-index: 0;
     position: absolute;
 
 }
 
-.container > h1 {
-    font-family: "Fira Code Retina";
-    font-size: 2vw;
-    text-shadow: 6px 5px #2d2c29;
-    color: #d7b506;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
+
 .dealer-field{
     display: flex;
     flex-direction: row;
@@ -109,6 +103,7 @@ body {
     margin-top: 0;
     border-radius: 10%;
     border:0.5vw solid #ffd50a;
+    opacity: 85%;
 }
 
 .player-2-cards {
@@ -123,6 +118,7 @@ body {
     margin-top: 0;
     border-radius: 10%;
     border: 0.5vw solid #ffd50a;
+    opacity: 85%;
 }
 
 .deck {
@@ -151,9 +147,10 @@ body {
 }
 
 @keyframes active {
-    0% {border-color: red}
+    0% {border-color: #015501
+    }
     50% {border-color: yellow}
-    100% {border-color: red}
+    100% {border-color: #015501}
 }
 
 .active {
