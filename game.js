@@ -208,6 +208,7 @@ const game = {
     },
     initDealer: () => {
         game.dealer = {
+            Name: "Dealer",
             Hand: document.querySelector(".dealer-hand"),
             Score: document.querySelector(".dealer-score > p"),
             ScoreInt: 0
