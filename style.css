@@ -32,7 +32,7 @@ body {
     justify-content: flex-end;
     align-content: center;
     background: url(./cards/poker-table-background-green-color_47243-1068.jpg) no-repeat ;
-    background-size: 100%;
+    background-size: 120%;
     width: 75%;
     height: 90%;
     border: 50px solid black;
@@ -70,7 +70,7 @@ body {
 }
 
 .bet-field > h1{
-    top: 53%;
+    top: 43%;
     font-family: 'Oswald', sans-serif;;
     color: black;
     opacity: 70%;
