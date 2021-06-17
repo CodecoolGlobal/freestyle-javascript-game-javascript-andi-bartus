@@ -274,3 +274,28 @@ body {
 .hidden{
     visibility: hidden;
 }
+
+
+.dealer-hand{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dealer-hand > img{
+    height: 70%;
+    margin-top: 2%
+}
+
+.dealer-score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62%;
+}
+
+
+
