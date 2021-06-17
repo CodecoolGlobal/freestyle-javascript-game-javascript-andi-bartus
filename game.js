@@ -3,6 +3,7 @@ const game = {
     player2: undefined,
     deck: undefined,
     dealer: undefined,
+    dealerInterval: undefined,
     initDeck: () => {
         let suits = ["S", "H", "D", "C"];
         let values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
@@ -104,13 +105,23 @@ const game = {
         player.Score.innerHTML = `Score: ${newScore.toString()}`;
         player.ScoreInt = newScore;
     },
-    win: () => {
-        if (score1 === 21) {
-            alert(player1_name + "won the game!")
-        } else if (score2 === 21) {
-            alert(player2_name + "won the game!")
+    setDealerInterval: () => {
+        game.dealerInterval = setInterval(game.dealerRound, 1000)
+    },
+    dealerRound: () => {
+        if (game.dealer.ScoreInt <= 16){
+            game.getNewCard()
+            console.log(game.dealer.ScoreInt)
+        }
+        else{
+            game.win()
+            clearInterval(game.dealerRound)
         }
     },
+    win: () => {
+        alert("game over!")
+    }
+    ,
     initStay: () =>{
         document.querySelector(".stay").addEventListener('click', function () {
             let active = document.querySelector(".active");
@@ -123,7 +134,7 @@ const game = {
                 active.classList.remove("active");
                 document.querySelector(".deck").removeEventListener("click", game.getNewCard);
                 document.querySelector(".dealer_hand").classList.add("active");
-                game.playerRound();
+                game.setDealerInterval();
             }
         })
     },
@@ -156,22 +167,21 @@ const game = {
             console.log(player)
         }
     },
+    initDealer: () => {
+        game.dealer = {
+            hand: document.querySelector(".dealer_hand"),
+            score: document.querySelector(".dealer_score"),
+            scoreInt: 0
+        }
+    },
     initGame: () => {
+        game.initStart()
         game.initDeck()
         game.initNames()
         game.initDealer()
         game.initPlayers()
         game.initChips()
-        game.initStart()
         game.initStay()
-    },
-    initDealer: () => {
-        game.dealer = {
-            hand: document.querySelector(".dealer_hand"),
-            score: document.querySelector("dealer_score"),
-            scoreInt: 0
-        }
     }
 }
-
 game.initGame()
