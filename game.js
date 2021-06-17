@@ -90,17 +90,10 @@ const game = {
             player = game.dealer;
         }
         let randomCard = game.deck[Math.floor(Math.random() * (game.deck.length - 1))];
-        if (player === game.player1 || player === game.player2) {
             let newCard = document.createElement('img');
             newCard.src = `./cards/${randomCard.Value}${randomCard.Suit}.png`;
             newCard.classList.add("card");
             player.Hand.appendChild(newCard);
-        }
-        else{
-            let newCard = document.createElement("p");
-            newCard.innerHTML = `${randomCard.Value}${randomCard.Suit}`;
-            player.Hand.appendChild(newCard);
-        }
         let newScore = player.ScoreInt + randomCard.Weight;
         player.Score.innerHTML = `Score: ${newScore.toString()}`;
         player.ScoreInt = newScore;
@@ -114,8 +107,8 @@ const game = {
             console.log(game.dealer.ScoreInt)
         }
         else{
+            clearInterval(game.dealerInterval)
             game.win()
-            clearInterval(game.dealerRound)
         }
     },
     win: () => {
@@ -133,7 +126,7 @@ const game = {
             } else if (active.classList.contains("player-2-cards")) {
                 active.classList.remove("active");
                 document.querySelector(".deck").removeEventListener("click", game.getNewCard);
-                document.querySelector(".dealer_hand").classList.add("active");
+                document.querySelector(".dealer-hand").classList.add("active");
                 game.setDealerInterval();
             }
         })
@@ -169,8 +162,8 @@ const game = {
     },
     initDealer: () => {
         game.dealer = {
-            hand: document.querySelector(".dealer_hand"),
-            score: document.querySelector(".dealer_score"),
+            hand: document.querySelector(".dealer-hand"),
+            score: document.querySelector(".dealer-score"),
             scoreInt: 0
         }
     },
