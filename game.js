@@ -106,7 +106,7 @@ const game = {
         }
     },
     checkWinner: () => {
-        if (game.player1.ScoreInt > game.dealer.ScoreInt &&
+        if (game.player1.ScoreInt >= game.dealer.ScoreInt &&
             !game.player1.Hand.classList.contains('bust') ||
             game.dealer.Hand.classList.contains('bust')) {
             game.player1.Hand.classList.add('Win')
@@ -115,7 +115,7 @@ const game = {
         else {
             game.player1.Hand.classList.add('Lose')
         }
-        if (game.player2.ScoreInt > game.dealer.ScoreInt &&
+        if (game.player2.ScoreInt >= game.dealer.ScoreInt &&
             !game.player2.Hand.classList.contains('bust') ||
             game.dealer.Hand.classList.contains('bust')) {
             game.player2.Hand.classList.add('Win')
