@@ -106,13 +106,18 @@ const game = {
         }
     },
     checkWinner: () => {
-        if (game.player1.ScoreInt > game.dealer.ScoreInt && !game.player1.Hand.classList.contains('bust')) {
+        if (game.player1.ScoreInt > game.dealer.ScoreInt &&
+            !game.player1.Hand.classList.contains('bust') ||
+            game.dealer.Hand.classList.contains('bust')) {
             game.player1.Hand.classList.add('Win')
         }
+
         else {
             game.player1.Hand.classList.add('Lose')
         }
-        if (game.player2.ScoreInt > game.dealer.ScoreInt && !game.player2.Hand.classList.contains('bust')) {
+        if (game.player2.ScoreInt > game.dealer.ScoreInt &&
+            !game.player2.Hand.classList.contains('bust') ||
+            game.dealer.Hand.classList.contains('bust')) {
             game.player2.Hand.classList.add('Win')
         }
         else {
@@ -123,11 +128,17 @@ const game = {
             !game.dealer.Hand.classList.contains('bust')) {
             game.dealer.Hand.classList.add('Win')
         }
+        console.log(game.player1)
+        console.log(game.player2)
         if (game.player1.Hand.classList.contains('Win') && game.player2.Hand.classList.contains('Win')){
-            if (game.player1.ScoreInt > game.player2.ScoreInt) {
+            if (game.player1.ScoreInt > game.player2.ScoreInt && !game.player1.Hand.classList.contains('bust')) {
                 game.player2.Hand.classList.remove('Win')
             }
+            else if (game.player1.ScoreInt < game.player2.ScoreInt && !game.player2.Hand.classList.contains('bust')){
+                game.player1.Hand.classList.remove('Win')
+            }
             else {
+                game.player2.Hand.classList.remove('Win')
                 game.player1.Hand.classList.remove('Win')
             }
         }
@@ -139,7 +150,7 @@ const game = {
             alert(game.player1.Name + " won the game!")
         }
         else if (game.player2.Hand.classList.contains('Win')){
-            alert(game.player1.Name + " won the game!")
+            alert(game.player2.Name + " won the game!")
         }
         else if (game.dealer.Hand.classList.contains('Win')) {
             alert(game.dealer.Name + " won the game!")
@@ -169,7 +180,6 @@ const game = {
     dealerRound: () => {
         if (game.dealer.ScoreInt <= 16){
             game.getNewCard()
-            console.log(game.dealer)
         }
         else{
             clearInterval(game.dealerInterval)
@@ -202,7 +212,6 @@ const game = {
             else{
                 game.player2 = player;
             }
-            console.log(player)
         }
 
     },
