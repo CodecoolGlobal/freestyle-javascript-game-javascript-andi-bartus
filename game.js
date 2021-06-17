@@ -1,7 +1,8 @@
 const game = {
-    player1: null,
-    player2: null,
-    deck: null,
+    player1: undefined,
+    player2: undefined,
+    deck: undefined,
+    dealer: undefined,
     initDeck: () => {
         let suits = ["S", "H", "D", "C"];
         let values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
@@ -36,8 +37,12 @@ const game = {
         for (let item of chips) {
             item.querySelectorAll('img').forEach(img => {
                 img.draggable = true;
+
+
                 img.addEventListener('dragstart', function (e) {
                     dragged_item = e.target
+
+
                     dragged_copy = dragged_item.cloneNode(true)
                 })
             });
@@ -77,20 +82,27 @@ const game = {
         if (active.classList.contains("player-1-cards")){
             player = game.player1;
         }
-        else{
-            player = game.player2
+        else if (active.classList.contains("player-2-cards")){
+            player = game.player2;
+        }
+        else {
+            player = game.dealer;
         }
         let randomCard = game.deck[Math.floor(Math.random() * (game.deck.length - 1))];
-        let newCard = document.createElement('img');
-        newCard.src = `./cards/${randomCard.Value}${randomCard.Suit}.png`;
-        newCard.classList.add("card");
-        player.Hand.appendChild(newCard);
+        if (player === game.player1 || player === game.player2) {
+            let newCard = document.createElement('img');
+            newCard.src = `./cards/${randomCard.Value}${randomCard.Suit}.png`;
+            newCard.classList.add("card");
+            player.Hand.appendChild(newCard);
+        }
+        else{
+            let newCard = document.createElement("p");
+            newCard.innerHTML = `${randomCard.Value}${randomCard.Suit}`;
+            player.Hand.appendChild(newCard);
+        }
         let newScore = player.ScoreInt + randomCard.Weight;
         player.Score.innerHTML = `Score: ${newScore.toString()}`;
-        player.ScoreInt = newScore
-    },
-    dealerRound: () => {
-        alert("dealer's round!")
+        player.ScoreInt = newScore;
     },
     win: () => {
         if (game.player1.ScoreInt === 21 && game.player2.) {
@@ -109,15 +121,19 @@ const game = {
                 game.playerRound()
             } else if (active.classList.contains("player-2-cards")) {
                 active.classList.remove("active");
-                game.dealerRound()
+                document.querySelector(".deck").removeEventListener("click", game.getNewCard);
+                document.querySelector(".dealer_hand").classList.add("active");
+                game.playerRound();
             }
         })
     },
     initStart: () => {
+        document.querySelector(".stay").classList.add('hidden')
         document.querySelector(".start").addEventListener("click", function(){
+            document.querySelector(".player-1-cards").classList.add("active")
             document.querySelector(".start").classList.add('hidden')
+            document.querySelector(".stay").classList.remove('hidden')
             game.playerRound()
-
         })
     },
     initPlayers:() => {
@@ -143,10 +159,18 @@ const game = {
     initGame: () => {
         game.initDeck()
         game.initNames()
+        game.initDealer()
         game.initPlayers()
         game.initChips()
         game.initStart()
         game.initStay()
     },
+    initDealer: () => {
+        game.dealer = {
+            hand: document.querySelector(".dealer_hand"),
+            score: document.querySelector("dealer_score"),
+            scoreInt: 0
+        }
+    }
 }
 game.initGame()
