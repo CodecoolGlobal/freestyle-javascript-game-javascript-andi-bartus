@@ -147,15 +147,21 @@ const game = {
     win: () => {
         game.checkWinner()
         if (game.player1.Hand.classList.contains('Win')) {
-            alert(game.player1.Name + " won the game!")
+            document.querySelector(".win-window").classList.remove("hidden")
+            document.querySelector(".win-window > p").innerHTML = `${game.player1.Name} WON!`
         }
         else if (game.player2.Hand.classList.contains('Win')){
-            alert(game.player2.Name + " won the game!")
+            document.querySelector(".win-window").classList.remove("hidden")
+            document.querySelector(".win-window > p").innerHTML = `${game.player2.Name} WON!`
         }
         else if (game.dealer.Hand.classList.contains('Win')) {
-            alert(game.dealer.Name + " won the game!")
+            document.querySelector(".win-window").classList.remove("hidden")
+            document.querySelector(".win-window > p").innerHTML = `${game.dealer.Name} WON!`
         }
-        else {alert("Nobody won the game!")}
+        else {
+            document.querySelector(".win-window").classList.remove("hidden")
+            document.querySelector(".win-window > p").innerHTML = 'Nobody WON!'
+        }
     },
     stay: () => {
         let active = document.querySelector(".active");

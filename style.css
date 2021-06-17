@@ -171,7 +171,7 @@ body {
 
 .button {
     height: 10%;
-    width: 55%;
+    width: 50%;
     background-color: transparent;
     font-weight: bolder;
     color: white;
@@ -315,6 +315,7 @@ body {
     justify-content: center;
     align-items: center;
     bottom: 30%;
+    left: 30%;
 }
 
 .win-window > p {
@@ -332,12 +333,22 @@ body {
 }
 
 .restart-form > button {
-    width: 50%;
+    width: 60%;
     height: 25%;
     text-shadow: none;
     border-radius: 10%;
+    background-color: transparent;
+    font-weight: bolder;
+    color: white;
+    font-family: test, 'Oswald', 'sans-serif';
+    font-size: 1vw;
+    border-style: dot-dot-dash;
+    border-width: thick;
+    border-color: #ffd50a;
+    opacity: 80%;
 }
 
 .win-window.hidden {
     visibility: hidden;
 }
+
