@@ -90,7 +90,6 @@ body {
     align-content: start;
     display: flex;
     flex-direction: row;
-
     justify-content: space-around;
     height: 75%;
     width: 100%;
@@ -188,8 +187,8 @@ body {
 
 
 .card{
-    max-width: 25%;
-  height: auto;
+    width: 22%;
+
 }
 
 .table {
@@ -283,15 +282,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-content: center;
-    width: 90%;
-    height: 90%;
-    margin-bottom: 5%;
+    align-items: center;
+    width: 1200px;
+    height: 216px;
+
+
 }
 
 .dealer-hand > img{
-    height: 80%;
-    margin-top: 2%;
+    height: 150px;
+    width: 110px;
 
 }
 
