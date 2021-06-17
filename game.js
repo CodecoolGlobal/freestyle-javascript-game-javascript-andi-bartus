@@ -106,21 +106,21 @@ const game = {
         }
     },
     checkWinner: () => {
-        if (game.player1.ScoreInt > game.dealer.ScoreInt) {
+        if (game.player1.ScoreInt > game.dealer.ScoreInt && !game.player1.Hand.classList.contains('bust')) {
             game.player1.Hand.classList.add('Win')
         }
         else {
             game.player1.Hand.classList.add('Lose')
         }
-        console.log(game.player1.Hand.classList)
-        if (game.player2.ScoreInt > game.dealer.ScoreInt) {
+        if (game.player2.ScoreInt > game.dealer.ScoreInt && !game.player2.Hand.classList.contains('bust')) {
             game.player2.Hand.classList.add('Win')
         }
         else {
             game.player2.Hand.classList.add('Lose')
         }
-        console.log(game.player2.Hand.classList)
-        if (game.player1.Hand.classList.contains('Lose') && game.player2.Hand.classList.contains('Lose')) {
+        if (game.player1.Hand.classList.contains('Lose') &&
+            game.player2.Hand.classList.contains('Lose') &&
+            !game.dealer.Hand.classList.contains('bust')) {
             game.dealer.Hand.classList.add('Win')
         }
         if (game.player1.Hand.classList.contains('Win') && game.player2.Hand.classList.contains('Win')){
@@ -130,8 +130,6 @@ const game = {
             else {
                 game.player1.Hand.classList.remove('Win')
             }
-            console.log(game.player1.Hand.classList)
-            console.log(game.player2.Hand.classList)
         }
 
     },
@@ -146,6 +144,7 @@ const game = {
         else if (game.dealer.Hand.classList.contains('Win')) {
             alert(game.dealer.Name + " won the game!")
         }
+        else {alert("Nobody won the game!")}
     },
     stay: () => {
         let active = document.querySelector(".active");
