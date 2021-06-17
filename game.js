@@ -104,9 +104,6 @@ const game = {
         player.Score.innerHTML = `Score: ${newScore.toString()}`;
         player.ScoreInt = newScore;
     },
-    dealerRound: () => {
-
-    },
     win: () => {
         if (score1 === 21) {
             alert(player1_name + "won the game!")
@@ -124,17 +121,19 @@ const game = {
                 game.playerRound()
             } else if (active.classList.contains("player-2-cards")) {
                 active.classList.remove("active");
-                game.dealerRound()
+                document.querySelector(".deck").removeEventListener("click", game.getNewCard);
+                document.querySelector(".dealer_hand").classList.add("active");
+                game.playerRound();
             }
         })
     },
     initStart: () => {
         document.querySelector(".stay").classList.add('hidden')
         document.querySelector(".start").addEventListener("click", function(){
+            document.querySelector(".player-1-cards").classList.add("active")
             document.querySelector(".start").classList.add('hidden')
             document.querySelector(".stay").classList.remove('hidden')
             game.playerRound()
-
         })
     },
     initPlayers:() => {
