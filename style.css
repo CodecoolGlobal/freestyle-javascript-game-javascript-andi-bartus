@@ -106,7 +106,7 @@ body {
     font-weight: bold;
     width: 90%;
     height: 70%;
-    margin-top: 0%;
+    margin-top: 0;
     border-radius: 10%;
     border:0.5vw solid #ffd50a;
 }
@@ -120,19 +120,16 @@ body {
     font-weight: bolder;
     width: 90%;
     height: 70%;
-    margin-top: 0%;
+    margin-top: 0;
     border-radius: 10%;
     border: 0.5vw solid #ffd50a;
 }
 
 .deck {
-    background: url(./cards/purple_back.png) no-repeat;
-    background-position: center;
+    background: url(./cards/purple_back.png) no-repeat center;
     background-size: 80%;
-;
     display: flex;
-
-    height: 40%;
+    height: 45%;
     width: 60%;
 
 }
@@ -206,7 +203,7 @@ body {
 .table > p {
     color: #ffd50a;
     font-weight: bold;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
     font-size: 1.8vw;
 }
 
