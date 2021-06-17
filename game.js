@@ -106,30 +106,30 @@ const game = {
         }
     },
     checkWinner: () => {
-        if (game.player1.ScoreInt >= game.dealer.ScoreInt &&
-            !game.player1.Hand.classList.contains('bust') ||
+        if (game.player1.ScoreInt >= game.dealer.ScoreInt ||
             game.dealer.Hand.classList.contains('bust')) {
-            game.player1.Hand.classList.add('Win')
+            if (!game.player1.Hand.classList.contains('bust')) {
+                game.player1.Hand.classList.add('Win')
+            }
         }
-
         else {
             game.player1.Hand.classList.add('Lose')
         }
-        if (game.player2.ScoreInt >= game.dealer.ScoreInt &&
-            !game.player2.Hand.classList.contains('bust') ||
+
+        if (game.player2.ScoreInt >= game.dealer.ScoreInt ||
             game.dealer.Hand.classList.contains('bust')) {
-            game.player2.Hand.classList.add('Win')
+            if (!game.player2.Hand.classList.contains('bust')) {
+                game.player2.Hand.classList.add('Win')
+            }
         }
         else {
             game.player2.Hand.classList.add('Lose')
         }
-        if (game.player1.Hand.classList.contains('Lose') &&
-            game.player2.Hand.classList.contains('Lose') &&
+        if ((game.player1.Hand.classList.contains('Lose') || game.player1.Hand.classList.contains('bust')) &&
+            game.player2.Hand.classList.contains('Lose') || game.player2.Hand.classList.contains('bust') &&
             !game.dealer.Hand.classList.contains('bust')) {
             game.dealer.Hand.classList.add('Win')
         }
-        console.log(game.player1)
-        console.log(game.player2)
         if (game.player1.Hand.classList.contains('Win') && game.player2.Hand.classList.contains('Win')){
             if (game.player1.ScoreInt > game.player2.ScoreInt && !game.player1.Hand.classList.contains('bust')) {
                 game.player2.Hand.classList.remove('Win')
