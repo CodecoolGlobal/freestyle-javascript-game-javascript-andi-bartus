@@ -93,7 +93,7 @@ const game = {
         alert("dealer's round!")
     },
     win: () => {
-        if (score1 === 21) {
+        if (game.player1.ScoreInt === 21 && game.player2.) {
             alert(player1_name + "won the game!")
         } else if (score2 === 21) {
             alert(player2_name + "won the game!")
