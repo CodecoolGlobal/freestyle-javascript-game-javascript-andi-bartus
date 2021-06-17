@@ -173,4 +173,5 @@ const game = {
         }
     }
 }
+
 game.initGame()
