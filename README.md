@@ -16,9 +16,6 @@ Our task was to make a game that runs in the browser. We had some good ideas, bu
 ```sh
 git clone https://github.com/CodecoolGlobal/freestyle-javascript-game-javascript-andi-bartus
 cd freestyle-javascript-game-javascript-andi-bartus
-```
-for python:
-```sh
 python3 -m http.server
 ```
 
