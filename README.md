@@ -9,7 +9,7 @@ Our task was to make a game that runs in the browser. We had some good ideas, bu
 ## Prerequisites
 
 - Modern browser
-- python or npx
+- python
 
 ## Install
 
@@ -20,10 +20,6 @@ cd freestyle-javascript-game-javascript-andi-bartus
 for python:
 ```sh
 python3 -m http.server
-```
-for npx:
-```sh
-npx http-server
 ```
 
 ## Gameplay
